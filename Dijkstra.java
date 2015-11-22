@@ -258,18 +258,16 @@ public class Dijkstra {
         String dest = "Z";
         
         g.initUnvisited();
-        g.resetCosts();			//step 1
-        
-        g.getNodeWithLabel(source).setCurrentCost(0); //step 2.
+        g.resetCosts();			
+        g.getNodeWithLabel(source).setCurrentCost(0); 
         System.out.println(g.toString());
-        while(!(g.unvisited_.isEmpty()))		//step 3.
+        while(!(g.unvisited_.isEmpty()))		
         {
-        	String temp = g.getUnivisitedNodewithSmallestCurrentCost();	//step 4.1
-        	g.removeVisited(temp);				//step 4.2
-        	g.updateCosts(temp);				//step 4.3
-        	System.out.println(g.toString());	//step 4.4
+        	String temp = g.getUnivisitedNodewithSmallestCurrentCost();
+        	g.removeVisited(temp);			
+        	g.updateCosts(temp);			
+        	System.out.println(g.toString());	
         }
-        // step 5.
         String path = new String("");
         String label = dest;
         path += dest + " < ";
